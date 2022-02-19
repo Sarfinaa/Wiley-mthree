@@ -1,3 +1,4 @@
+
 public class Aboutme {
     public static void printInfo(String name, String city, String hobby) {
         System.out.println("Name: " + name);
