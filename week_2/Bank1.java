@@ -1,3 +1,5 @@
+package week_2;
+
 import java.util.*;
 
 class BankAccount {

@@ -1,3 +1,5 @@
+package week_2;
+
 abstract class BankAccounts1 {
     protected int accNo;
     protected String accHoldername;

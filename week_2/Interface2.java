@@ -1,3 +1,5 @@
+package week_2;
+
 interface Shape1 {
     void draw();
 }

@@ -1,3 +1,5 @@
+package week_1;
+
 class Account {
     protected int amount;
     protected String accountHolder;

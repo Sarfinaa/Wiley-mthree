@@ -1,3 +1,5 @@
+package week_2;
+
 class Parent {
     String firstname;
     final String lastname;

@@ -5,7 +5,7 @@ import java.io.ObjectOutputStream;
 
 public class Kiosk {
     public static void main(String[] args) {
-        try (FileOutputStream fout = new FileOutputStream("week_4/account.txt");
+        try (FileOutputStream fout = new FileOutputStream("week_4/serialization/account.txt");
                 ObjectOutputStream out = new ObjectOutputStream(fout);) {
             // Creating the object
             BankAccount acc = new BankAccount(1002, "Karan Seth", 1000);

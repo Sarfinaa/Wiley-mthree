@@ -1,3 +1,5 @@
+package week_2;
+
 import java.lang.Math;
 
 abstract class Shape {

@@ -1,3 +1,5 @@
+package week_2;
+
 interface WorldBank {
 
     void showBalance();

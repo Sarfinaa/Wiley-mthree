@@ -1,3 +1,5 @@
+package week_1;
+
 public class EvenOdd {
     public static void oddeven(int a) {
         if (a % 2 == 0)

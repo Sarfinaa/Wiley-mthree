@@ -1,3 +1,5 @@
+package week_2;
+
 class Sports {
     String getName() {
         return "Generic Sports";

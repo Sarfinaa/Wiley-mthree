@@ -1,3 +1,5 @@
+package week_2;
+
 class Address {
     Location location;
     String state;

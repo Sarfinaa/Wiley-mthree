@@ -1,3 +1,5 @@
+package week_1;
+
 class Student {
     private static int rollInc = 1;
     private int rollNo;

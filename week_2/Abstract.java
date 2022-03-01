@@ -1,3 +1,5 @@
+package week_2;
+
 abstract class Vehicle {
     abstract void drive();
 
