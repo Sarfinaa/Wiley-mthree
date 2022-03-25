@@ -48,7 +48,7 @@ public class ThreadCooperationDemo {
 
         new Thread() {
             public void run() {
-                c.deposit(5000);
+                c.deposit(1000);
             }
         }.start(); // Thread-4
     }

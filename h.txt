@@ -1,0 +1,232 @@
+ODD OR EVEN
+// You are using Java
+import java.util.*;
+import java.io.*;
+
+class Main{
+public static void main(String[] args)
+{
+Scanner sc = new Scanner(System.in);
+int a;
+System.out.println("Enter an integer:");
+a = sc.nextInt();
+if(a%2==0)
+System.out.println(a+" is an even number");
+else
+System.out.println(a+" is an odd number");
+}
+
+
+}
+
+
+Luxury Bus Vs Share Auto
+accepted
+
+
+MAXIMUM OF 3
+
+
+// You are using Java
+
+import java.util.*;
+import java.io.*;
+class Main{
+public static void main(String[] args){
+
+Scanner sc = new Scanner(System.in);
+int x,y,z;
+System.out.println("Enter 3 numbers:");
+x = sc.nextInt();
+y = sc.nextInt();
+z = sc.nextInt();
+if(x>y && x>z)
+System.out.println(x+" is the maximum number");
+else if(y>z)
+System.out.println(y+" is the maximum number");
+else
+System.out.println(z+" is the maximum number");
+
+}
+
+}
+
+NEW or OLD
+wrong answer
+
+Sum of three numbers within range or not
+accepted
+
+REGION TRACK
+==  ||  ==
+
+SEMESTER HOLIDAYS
+a%2==0
+
+Upside Down Gift Articles
+// You are using Java
+import java.util.*;
+
+class Main  {
+    public static void main(String args[]) {
+
+    Scanner in = new Scanner(System.in);
+int number = in.nextInt();
+int ten = number/10;
+int one = number%10;
+if ((one == 0 || one == 1 || one == 6 || one == 9 || one == 8) && (ten == 0 || ten == 1 || ten == 6 || ten == 9 || ten == 8) )
+System.out.println("yes");
+else
+System.out.println("no");
+}
+}
+
+Vehicle Parking
+wrong answer
+
+LAB SEATING ARRANGEMENT
+% >= 120 !=
+
+Birthday Gift 2
+wrong answer
+
+
+Birthday Gift 1
+wrong answer
+
+LIFT I
+&&  <
+
+Birthday Gift 1
+||
+
+Vehicle Parking
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        int N1,N2,N3,N4,N;
+        Scanner s=new Scanner(System.in);
+        N1=s.nextInt();
+        N2=s.nextInt();
+        N3=s.nextInt();
+        N4=s.nextInt();
+        N=s.nextInt();
+        if(N<N1){
+            System.out.println("B1");}
+        else if(N<N1+N2){
+            System.out.println("B2");}
+        else if(N<N1+N2+N3){
+            System.out.println("B3\n");}
+        else if(N<N1+N2+N3+N4){
+            System.out.println("B4");}
+        else if(N>=N1+N2+N3+N4){
+            System.out.println("EXT");}
+}
+}
+LEAP YEAR
+%, ==, 100, !=, ==
+
+Letter based Gifts Selection
+e==a.charAt(0)||e==b.charAt(0)||e==c.charAt(0)
+
+
+Call Taxi Vs Personal Vehicle
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        int salary,mileage,cost,fare,taxicost,audicost;
+        float distance;
+        Scanner s=new Scanner(System.in);
+        System.out.println("Enter the driver salary");
+        salary=s.nextInt();
+        System.out.println("Enter the car mileage in km per litre");
+        mileage=s.nextInt();
+        System.out.println("Enter the cost of petrol per litre");
+        cost=s.nextInt();
+        System.out.println("Enter the taxi fare for a km");
+        fare=s.nextInt();
+        System.out.println("Enter the distance of travel");
+        distance=s.nextFloat();
+        taxicost=(int)(salary+((distance/mileage)*cost));
+        audicost=(int)(50+((distance-3)*fare));
+        if(taxicost>audicost)
+        {
+            System.out.println("Minimal cost travel is by taxi");
+        }
+        else
+        {
+            System.out.println("Minimal cost travel is by audi");
+        }
+}
+}
+Letter based Gifts Selection
+
+
+import java.util.Scanner;
+class Main {
+public static void main(String[] args) {
+    Scanner s=new Scanner(System.in);
+    String a,b,c;
+
+a=s.next();
+b=s.next();
+c=s.next();
+
+char e;
+e=s.next().charAt(0);
+if ((e==a.charAt(0))||(e==b.charAt(0))||(e==c.charAt(0)))
+{
+    System.out.println("yes");
+
+}
+else
+{
+System.out.println("no");
+}
+}
+}
+
+LIFT 2
+
+import java.util.Scanner;
+
+class Main {
+	public static void main(String[] args) {
+		int n, n1, n2, n3, a, b, c;
+		Scanner s = new Scanner(System.in);
+		n = s.nextInt();
+		n1 = s.nextInt();
+		n2 = s.nextInt();
+		n3 = s.nextInt();
+		a = Math.abs(n - n1);
+		b = Math.abs(n - n2);
+		c = Math.abs(n - n3);
+		if (a == b) {
+			if (n1 > n2) {
+				System.out.println(n1);
+			} else {
+				System.out.println(n2);
+			}
+		} else if (b == c) {
+			if (n2 > n3) {
+				System.out.println(n2);
+			} else {
+				System.out.println(n3);
+			}
+		} else if (c == a) {
+			if (n3 > n1) {
+				System.out.println(n3);
+			} else {
+				System.out.println(n1);
+			}
+		} else {
+			if (a < b && a < c)
+				System.out.println(n1);
+			else if (b < a && b < c)
+				System.out.println(n2);
+			else if (c < a && c < b)
+				System.out.println(n3);
+		}
+	}
+}
+
