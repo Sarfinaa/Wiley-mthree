@@ -59,25 +59,28 @@ public class Maps {
         map.put(b2.id, b2);
         map.put(b3.id, b3);
         map.put(b4.id, b4);
-        map.forEach((k, v) -> {
-            System.out.println(v);
-        });
-        System.out.println("After doubling the quantity!!!");
-        map.forEach((k, v) -> {
-            v.quantity *= 2;
-            map.put(k, v);
-            System.out.println(v);
-        });
+        for (Map.Entry<Integer, Books> e : map.entrySet()) {
+            System.out.println(e.getKey());
+        }
+        // map.forEach((k, v) -> {
+        // System.out.println(v);
+        // });
+        // System.out.println("After doubling the quantity!!!");
+        // map.forEach((k, v) -> {
+        // v.quantity *= 2;
+        // map.put(k, v);
+        // System.out.println(v);
+        // });
 
         // if (map.containsKey(233)) {
         // map.get(233).publisher += " USA";
         // map.replace(233, map.get(233));
         // }
-        System.out.println("After merging!!");
-        map.merge(233, map.get(233), (oldBook, newBook) -> {
-            newBook.publisher += " USA";
-            return newBook;
-        });
-        System.out.println(map.get(233));
+        // System.out.println("After merging!!");
+        // map.merge(233, map.get(233), (oldBook, newBook) -> {
+        // newBook.publisher += " USA";
+        // return newBook;
+        // });
+        // System.out.println(map.get(233));
     }
 }
