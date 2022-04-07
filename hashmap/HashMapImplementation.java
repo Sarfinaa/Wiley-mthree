@@ -33,29 +33,39 @@ class HashMap {
     int size = 0;
 
     public int calHash(int key) {
-        return key % map.length;
-    }
-
-    public static Node getLastNode(Node head) {
-        Node tmp = head;
-        while (tmp.next != null) {
-            tmp = tmp.next;
-        }
-        return tmp;
+        return key & (map.length - 1);
     }
 
     public HashMap(int size) {
         map = new Node[size];
     }
 
+    public boolean equals(Node o1, Node o2) {
+
+        if (o1.hash == o2.hash && o1.key == o2.key)
+            return true;
+        return false;
+    }
+
     public void put(int key, int value) {
         int hash = calHash(key);
         Node nNode = new Node(key, value, hash);
-        if (map[hash] != null) {
-            Node fNode = map[hash];
-            Node getLast = getLastNode(fNode);
-            getLast.next = nNode;
-
+        Node tmp = map[hash];
+        Node prev = null;
+        boolean found = false;
+        if (tmp != null) {
+            while (tmp != null) {
+                if (nodeFound(hash, key, tmp)) {
+                    tmp.value = value;
+                    found = true;
+                    break;
+                }
+                prev = tmp;
+                tmp = tmp.next;
+            }
+            if (!found) {
+                prev.next = nNode;
+            }
         } else {
             map[hash] = nNode;
         }
@@ -86,6 +96,26 @@ class HashMap {
         return value;
     }
 
+    public int size() {
+        return size;
+    }
+
+    public boolean containsKey(int key) {
+        int hash = calHash(key);
+        Node tmp = map[hash];
+        if (tmp == null) {
+            return false;
+        } else {
+            while (tmp != null) {
+                if (nodeFound(hash, key, tmp)) {
+                    return true;
+                }
+                tmp = tmp.next;
+            }
+            return false;
+        }
+    }
+
     @Override
     public String toString() {
         String res = "[";
@@ -104,7 +134,10 @@ public class HashMapImplementation {
         HashMap map = new HashMap(4);
         map.put(1, 2);
         map.put(5, 3);
-        map.put(2, 4);
+        map.put(5, 6);
+        map.put(6, 2);
+        map.put(6, 3);
+        map.put(2, 3);
         System.out.println(map);
 
     }
